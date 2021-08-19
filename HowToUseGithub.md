@@ -42,8 +42,10 @@ We only have 1 branch and we will probably use more in the future but right now
 once you have done some code (typically completed a feature), you will need to commit
  it to the branch. Do this by going to the source control tab and under the first menu
  it will show you all your changes. To commit these changes if you are satisfied you
- need to add a commit message and then press commit. This will write all of the changes
- to the repository.
+ need to add a commit message and then press commit. This will prepare all the changes for
+ pushing and will write the LOCAL repository on your machine. To get these cahnges to the
+ GitHub you need to push them, this is done by pressing the push button under the brances
+ menu in the source control tab. It shoould look like a little arrow next to your commit.
 Notes:
 - it will ask you about staging commits. Stagin a file is basically confirming you want to 
  commit it, if there are files you forgot to stage but want them commited press the yes button
