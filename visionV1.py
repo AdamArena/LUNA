@@ -2,12 +2,8 @@
 import io
 import numpy as np 
 import time
-import picamera
-import picamera.array
 import cv2
 import cv2 as cv
-from picamera.array import PiRGBArray
-from picamera import PiCamera
 from math import atan,sin,cos,pi,floor
 
 
@@ -31,8 +27,8 @@ def find_objects(frame):                                   #check if data was ob
 	hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) 
     
     #Threshold for orange colour using two thresholds
-	Orange_mask1_low = (0,230,170)
-	Orange_mask1_upper = (255,255,220)
+	Orange_mask1_low = (168,100,0)
+	Orange_mask1_upper = (180,255,220)
     
 	Orange_mask2_low = (0, 150, 80)
 	Orange_mask2_upper = (12, 255, 255)
@@ -111,7 +107,7 @@ def find_objects(frame):                                   #check if data was ob
 			cv2.FONT_HERSHEY_TRIPLEX, 0.5, (0, 255, 0), 1)
 
 	#Find centre of image and calculate angle to it
-	ref = (floor(320/2),floor(240/2))
+	ref = (round(frame.shape[1]/2),round(frame.shape[0]/2))
 	cv2.circle(frame, ref, 5, (255,255,0), -1)
 		
    
