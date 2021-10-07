@@ -1,4 +1,4 @@
-############################# IMAGE CAPTURE USING PICAMERA (PI) ################################
+### LIBRARIES ###
 import io
 import numpy as np 
 import time
@@ -7,12 +7,14 @@ import cv2 as cv
 from math import atan,sin,cos,pi,floor
 
 
-######### CAPTURE VIDEO ###############   
+### INITIATE VIDEO CAPTURE ###
 
 cap = cv2.VideoCapture(0)                               #Connect to camera 0
 cap.set(3,320)                                          #set width to 320
 cap.set(4,240)                                  #Get a frame from the camera
 
+
+### PROCESS IMAGE FUNCTION ###
 
 def find_objects(frame):                                   #check if data was obtained
 
