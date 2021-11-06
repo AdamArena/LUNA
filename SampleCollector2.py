@@ -52,7 +52,7 @@ class SampleCollector:
         
 
     def PrepArms(self):
-        self.OpenCollector(False)
+        self.OpenCollector()
         sleep(0.2)
         _ = call(['python3', 'CollectorCoProc.py', '--pin', str(self.FLIP_PIN), '-s', str(self.FLIP_OPEN)])
         self.flipOpen = True
